@@ -10,6 +10,10 @@ features! {
     /// Altivec
     @FEATURE: #[unstable(feature = "stdsimd", issue = "27731")] vsx: "vsx";
     /// VSX
+    @FEATURE: #[unstable(feature = "stdsimd", issue = "27731")] vcrypto: "vcrypto";
+    /// Vcrypto
     @FEATURE: #[unstable(feature = "stdsimd", issue = "27731")] power8: "power8";
     /// Power8
+    @FEATURE: #[unstable(feature = "stdsimd", issue = "27731")] power9: "power9";
+    /// Power9
 }

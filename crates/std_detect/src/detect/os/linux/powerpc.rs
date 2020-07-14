@@ -21,7 +21,9 @@ pub(crate) fn detect_features() -> cache::Initializer {
         // index of the bit to test like in ARM and Aarch64)
         enable_feature(&mut value, Feature::altivec, auxv.hwcap & 0x10000000 != 0);
         enable_feature(&mut value, Feature::vsx, auxv.hwcap & 0x00000080 != 0);
+        enable_feature(&mut value, Feature::vcrypto, auxv.hwcap2 & 0x02000000 != 0);
         enable_feature(&mut value, Feature::power8, auxv.hwcap2 & 0x80000000 != 0);
+        enable_feature(&mut value, Feature::power9, auxv.hwcap2 & 0x00800000 != 0);
         return value;
     }
 

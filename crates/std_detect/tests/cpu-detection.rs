@@ -53,7 +53,9 @@ fn aarch64_linux() {
 fn powerpc_linux() {
     println!("altivec: {}", is_powerpc_feature_detected!("altivec"));
     println!("vsx: {}", is_powerpc_feature_detected!("vsx"));
+    println!("vcrypto: {}", is_powerpc_feature_detected!("vcrypto"));
     println!("power8: {}", is_powerpc_feature_detected!("power8"));
+    println!("power9: {}", is_powerpc_feature_detected!("power9"));
 }
 
 #[test]
@@ -61,7 +63,9 @@ fn powerpc_linux() {
 fn powerpc64_linux() {
     println!("altivec: {}", is_powerpc64_feature_detected!("altivec"));
     println!("vsx: {}", is_powerpc64_feature_detected!("vsx"));
+    println!("vcrypto: {}", is_powerpc64_feature_detected!("vcrypto"));
     println!("power8: {}", is_powerpc64_feature_detected!("power8"));
+    println!("power9: {}", is_powerpc64_feature_detected!("power9"));
 }
 
 #[test]
